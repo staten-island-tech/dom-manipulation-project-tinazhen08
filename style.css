@@ -1,0 +1,49 @@
+html,
+body,
+* {
+  font-size: 10px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Fredoka", sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+form {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  align-items: center;
+}
+
+.container {
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  height: 40rem;
+  width: 30%;
+  border: 10px solid black;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card-header {
+  font-size: 40px;
+  margin-top: 5px;
+  text-align: center;
+}

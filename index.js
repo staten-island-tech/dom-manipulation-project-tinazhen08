@@ -13,7 +13,7 @@ let student = {
     girlfriend: true,
 };
 
-DOMSelectors.button.addEventListener("click", function (event) {
+DOMSelectors.button.addEventListener("delete", function (event) {
     console.log(event.target.parentElement);
     event.target.parentElement.style.backgroundColor = "red";
 });
