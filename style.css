@@ -14,13 +14,15 @@ body {
 h1 {
   font-size: 60px;
   text-align: center;
+  margin: 2rem auto;
 }
 
 form {
   margin-left: auto;
   margin-right: auto;
-  font-size: 15px;
+  font-size: 20px;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .container {
