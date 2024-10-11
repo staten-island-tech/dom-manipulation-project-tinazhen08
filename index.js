@@ -1,10 +1,10 @@
 const DOMSelectors = {
-    header: document.querySelector("h1"),
-    cardHeader: document.querySelector(".card-header"),
-    button: document.querySelector(".btn"),
-    form: document.querySelector(".form"),
-    container: document.querySelector(".container"),
-    deletBtn: document.querySelector(".delete")
+  header: document.querySelector("h1"),
+  cardHeader: document.querySelector(".card-header"),
+  button: document.querySelector(".btn"),
+  form: document.querySelector(".form"),
+  container: document.querySelector(".container"),
+  deletBtn: document.querySelector(".delete"),
 };
 
 //Dictionary (python) -> Object (javascript)
@@ -13,43 +13,35 @@ const DOMSelectors = {
 let name, date, link;
 let cards = [];
 
-function makeCard(name, date, link){
-    DOMSelectors.container.insertAdjacentHTML(
-        "beforeend",
-        `<div class="container">
-            <div class="card">
-                <h2 class="card-header">${name}</h2>
-                <img src="${link}" alt="">
-                <h4 class="release">${date}</h4>
-                <button class="delete">Delete</button>
-            </div>
-        </div>`
-    );
-
-    cards.push({name, date, list});
-    
-
-};
-
-DOMSelectors.container.insertAdjacentHTML(
+function makeCard(name, date, link) {
+  DOMSelectors.container.insertAdjacentHTML(
     "beforeend",
-    `<div class="container">
-        <div class="card">
-            <h2 class="card-header">${movie.title}</h2>
-            <img src="${movie.poster}" alt="">
-            <h4 class="release">${movie.release}</h4>
-            <button class="delete" type="click">Delete</button>
-        </div>
-    </div>`
-);
+    `<div class="card">
+        <h2 class="card-header">${name}</h2>
+        <img src="${link}" alt="">
+        <h4 class="release">${date}</h4>
+        <button class="delete">Delete</button></div>`
+  );
 
-newButtons.forEach((button)=>
-    button.addEventListener("click", function(event){
-        console.log(event.target.textContent);
-    })
-);
+  cards.push({ name, date, link });
+}
 
+function clear() {
+  document.querySelector(".name").value = "";
+  document.querySelector(".date").value = "";
+  document.querySelector(".link").value = "";
+}
 
+DOMSelectors.form.btn.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  let name = document.querySelector(".name").value;
+  let date = document.querySelector(".date").value;
+  let link = document.querySelector(".link").value;
+
+  makeCard(name, date, link);
+  clear();
+});
 
 //create the HTML for inputs, cards and container aka where the cards go
 
