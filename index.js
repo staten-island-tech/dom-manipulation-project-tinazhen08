@@ -15,7 +15,7 @@ let cards = [];
 
 function makeCard(name, date, link) {
   DOMSelectors.container.insertAdjacentHTML(
-    "beforeend",
+    "beforeEnd",
     `<div class="card">
         <h2 class="card-header">${name}</h2>
         <img src="${link}" alt="">
@@ -32,7 +32,7 @@ function clear() {
   document.querySelector(".link").value = "";
 }
 
-DOMSelectors.form.btn.addEventListener("submit", function (event) {
+DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   let name = document.querySelector(".name").value;
