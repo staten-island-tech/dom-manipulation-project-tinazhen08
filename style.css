@@ -11,20 +11,12 @@ body {
   font-family: "Fredoka", sans-serif;
 }
 
-h1 {
+h1{
   font-size: 60px;
+  color: black;
+  margin-top: 30px;
   text-align: center;
-  margin: 2rem auto;
 }
-
-form {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 20px;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
 .container {
   margin: 2rem auto;
   display: flex;
@@ -34,18 +26,49 @@ form {
 }
 
 .card {
-  height: 40rem;
+  height: 60rem;
   width: 30%;
-  border: 10px solid black;
+  min-width: 310px;
+  border: 20px solid black;
+  box-shadow: 10px 10px rgb(99, 120, 133);
   border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  margin-bottom: 35px;
+  background-color: rgb(168, 186, 219);
 }
 
 .card-header {
   font-size: 40px;
-  margin-top: 5px;
+  margin-top: 20px;
   text-align: center;
+}
+
+.card-img {
+  width: 75%;
+  height: 80%;
+  object-fit: cover;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.release{
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    width: 100%;
+  }
+  .container {
+    flex-direction: column;
+  }
 }

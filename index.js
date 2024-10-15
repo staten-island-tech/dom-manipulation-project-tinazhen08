@@ -1,43 +1,54 @@
 const DOMSelectors = {
-  header: document.querySelector("h1"),
-  cardHeader: document.querySelector(".card-header"),
   button: document.querySelector(".btn"),
   form: document.querySelector(".form"),
   container: document.querySelector(".container"),
-  deletBtn: document.querySelector(".delete"),
+  name: document.querySelector(".name"),
+  date: document.querySelector(".date"),
+  link: document.querySelector(".link"),
 };
 
-//Dictionary (python) -> Object (javascript)
-//let student = {name: "Ryan", age: 15, girlfriend: true,};
-
-let name, date, link;
 let cards = [];
 
-function makeCard(name, date, link) {
+function makeCard(n, d, l) {
   DOMSelectors.container.insertAdjacentHTML(
-    "beforeEnd",
+    //Insert card in html container
+    "beforeend",
     `<div class="card">
-        <h2 class="card-header">${name}</h2>
-        <img src="${link}" alt="">
-        <h4 class="release">${date}</h4>
-        <button class="delete">Delete</button></div>`
+        <h2 class="card-header">${n}</h2>
+        <img src="${l}" alt=""></img>
+        <h4 class="release">${d}</h4>
+        <button class="delete" type="click">Delete</button>
+    </div>`
   );
 
-  cards.push({ name, date, link });
+  DOMSelectors.container.addEventListener("click", function (event) {
+    //Runs function after click
+    if (event.target.classList.contains("delete")) {
+      //Target specific delete to card
+      const card = event.target.parentElement;
+      card.remove();
+      // Update cards array
+    }
+  });
+
+  cards.push({ n, d, l });
+  console.log(cards);
 }
 
 function clear() {
-  document.querySelector(".name").value = "";
-  document.querySelector(".date").value = "";
-  document.querySelector(".link").value = "";
+  // Clear form input values
+  DOMSelectors.name.value = "";
+  DOMSelectors.date.value = "";
+  DOMSelectors.link.value = "";
 }
 
 DOMSelectors.form.addEventListener("submit", function (event) {
+  //Take input values and create card
   event.preventDefault();
 
-  let name = document.querySelector(".name").value;
-  let date = document.querySelector(".date").value;
-  let link = document.querySelector(".link").value;
+  let name = DOMSelectors.name.value;
+  let date = DOMSelectors.date.value;
+  let link = DOMSelectors.link.value;
 
   makeCard(name, date, link);
   clear();
