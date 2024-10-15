@@ -9,14 +9,39 @@ body,
 
 body {
   font-family: "Fredoka", sans-serif;
+  background-image: url("bg.png");
 }
 
 h1{
   font-size: 60px;
   color: black;
-  margin-top: 30px;
+  margin: 2rem auto;
   text-align: center;
 }
+
+p{
+  font-size: 15px;
+}
+
+.name{
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.date{
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.link{
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.btn{
+  font-size: 15px;
+}
+
 .container {
   margin: 2rem auto;
   display: flex;

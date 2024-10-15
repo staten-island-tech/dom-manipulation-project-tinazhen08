@@ -21,18 +21,29 @@ function makeCard(n, d, l) {
     </div>`
   );
 
+  cards.push({ n, d, l });
+}
+
+function removeBtn() {
   DOMSelectors.container.addEventListener("click", function (event) {
     //Runs function after click
     if (event.target.classList.contains("delete")) {
       //Target specific delete to card
       const card = event.target.parentElement;
-      card.remove();
-      // Update cards array
+      const cardIndex = Array.from(DOMSelectors.container.children).indexOf(
+        card
+      );
+
+      if (cardIndex > -1) {
+        // Remove card from the DOM
+        card.remove();
+        // Remove card from the cards array
+        cards.splice(cardIndex, 1);
+      }
+      console.log(cards);
+      // Log updated cards array
     }
   });
-
-  cards.push({ n, d, l });
-  console.log(cards);
 }
 
 function clear() {
@@ -52,6 +63,9 @@ DOMSelectors.form.addEventListener("submit", function (event) {
 
   makeCard(name, date, link);
   clear();
+  removeBtn();
+
+  console.log(cards);
 });
 
 //create the HTML for inputs, cards and container aka where the cards go
