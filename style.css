@@ -9,37 +9,40 @@ body,
 
 body {
   font-family: "Fredoka", sans-serif;
-  background-image: url("bg.png");
+  background-image: url("popcorn.jpg");
 }
 
 h1{
   font-size: 60px;
-  color: white;
+  background: linear-gradient(to bottom, #157cdb, #A2EAF3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   margin: 2rem auto;
   text-align: center;
 }
 
 p{
-  font-size: 15px;
+  font-size: 25px;
 }
 
 .name{
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .date{
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .link{
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .btn{
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .container {
