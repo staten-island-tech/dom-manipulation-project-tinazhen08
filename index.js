@@ -15,7 +15,7 @@ function makeCard(n, d, l) {
     "beforeend",
     `<div class="card">
         <h2 class="card-header">${n}</h2>
-        <img src="${l}" alt=""></img>
+        <img src="${l}" alt="" class="card-img"></img>
         <h4 class="release">${d}</h4>
         <button class="delete" type="click">Delete</button>
     </div>`
