@@ -9,21 +9,25 @@ body,
 
 body {
   font-family: "Fredoka", sans-serif;
-  background-image: url("popcorn.webp");
+  background-image: url("movie.avif");
 }
 
 h1{
   font-size: 60px;
-  background: linear-gradient(to bottom, #157cdb, #A2EAF3);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  margin: 2rem auto;
+  background: #7ec1ff;
+  color:whitesmoke;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   text-align: center;
+}
+
+form{
+  background: linear-gradient(to bottom, #7ec1ff, #98dae3);
 }
 
 p{
   font-size: 25px;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .name{
@@ -54,8 +58,8 @@ p{
 }
 
 .card {
-  height: 60rem;
-  width: 30%;
+  height: 70%;
+  width: 25%;
   min-width: 310px;
   border: 10px solid black;
   box-shadow: 5px 5px palevioletred;
@@ -75,7 +79,7 @@ p{
 }
 
 .card-img {
-  width: 75%;
+  width: 50%;
   height: 80%;
   object-fit: cover;
   margin: 1rem auto;
