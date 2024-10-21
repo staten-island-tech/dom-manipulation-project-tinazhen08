@@ -49,7 +49,6 @@ p {
 .card {
   height: 70%;
   width: 25%;
-  min-width: 310px;
   border: 10px solid white;
   box-shadow: 5px 5px black;
   border-radius: 25px;
@@ -57,7 +56,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: 3.5rem;
+  margin: 3.5rem;
   background-color: rgb(67, 62, 62);
 }
 
