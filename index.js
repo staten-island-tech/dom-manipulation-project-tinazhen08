@@ -7,21 +7,33 @@ const DOMSelectors = {
   link: document.querySelector(".link"),
 };
 
-let cards = [];
+let Movies = [];
 
-function makeCard(n, d, l) {
-  DOMSelectors.container.insertAdjacentHTML(
-    //Insert card in html container
-    "beforeend",
-    `<div class="card">
-        <h2 class="card-header">${n}</h2>
-        <img src="${l}" alt="" class="card-img"></img>
-        <h4 class="release">${d}</h4>
-        <button class="delete" type="click">Delete</button>
-    </div>`
-  );
+function makeMovie() {
+  let name = DOMSelectors.name.value;
+  let date = DOMSelectors.date.value;
+  let link = DOMSelectors.link.value;
 
-  cards.push({ n, d, l });
+  const movie = { name, date, link };
+  Movies.push(movie);
+
+  return `<div class="card">
+      <h2 class="card-header">${movie.name}</h2>
+      <img src="${movie.link}" alt="" class="card-img"></img>
+      <h4 class="release">${movie.date}</h4>
+      <button class="delete" type="click">Delete</button>
+  </div>`;
+}
+
+function addCard(m) {
+  DOMSelectors.container.insertAdjacentHTML("beforeend", m);
+}
+
+function clear() {
+  // Clear form input values
+  DOMSelectors.name.value = "";
+  DOMSelectors.date.value = "";
+  DOMSelectors.link.value = "";
 }
 
 function removeBtn() {
@@ -38,34 +50,25 @@ function removeBtn() {
         // Remove card from the DOM
         card.remove();
         // Remove card from the cards array
-        cards.splice(cardIndex, 1);
+        Movies.splice(cardIndex, 1);
+
+        console.log(Movies);
+        // Log updated cards array
       }
-      console.log(cards);
-      // Log updated cards array
     }
   });
-}
-
-function clear() {
-  // Clear form input values
-  DOMSelectors.name.value = "";
-  DOMSelectors.date.value = "";
-  DOMSelectors.link.value = "";
 }
 
 DOMSelectors.form.addEventListener("submit", function (event) {
   //Take input values and create card
   event.preventDefault();
 
-  let name = DOMSelectors.name.value;
-  let date = DOMSelectors.date.value;
-  let link = DOMSelectors.link.value;
-
-  makeCard(name, date, link);
+  const Movie = makeMovie();
+  addCard(Movie);
   clear();
   removeBtn();
 
-  console.log(cards);
+  console.log(Movies);
 });
 
 //create the HTML for inputs, cards and container aka where the cards go
