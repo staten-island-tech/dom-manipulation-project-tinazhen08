@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 8rem;
   color: white;
   text-shadow: -1px -1px 0 #000, 2px -2px 0 #000, -1px 1px 0 #000,
     2px 2px 0 #000;
@@ -21,29 +21,21 @@ h1 {
 }
 
 p {
-  font-size: 40px;
+  font-size: 4rem;
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     2px 2px 0 #000;
 }
 
-.name {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.date {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
+.name,
+.date,
 .link {
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .btn {
-  font-size: 25px;
+  font-size: 2.5rem;
 }
 
 .container {
@@ -65,13 +57,13 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: 35px;
+  margin-bottom: 3.5rem;
   background-color: rgb(67, 62, 62);
 }
 
 .card-header {
-  font-size: 40px;
-  margin-top: 20px;
+  font-size: 4rem;
+  margin-top: 2rem;
   text-align: center;
   color: white;
 }
@@ -81,18 +73,18 @@ p {
   height: 80%;
   object-fit: cover;
   margin: 1rem auto;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 .release {
-  font-size: 15px;
+  font-size: 1.5rem;
   margin: 1rem auto;
   color: white;
 }
 
 .delete {
-  font-size: 10px;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 1200px) {
